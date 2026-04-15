@@ -10,23 +10,20 @@ public class FullName {
         System.out.println("first last or first middle last: ");
         String name = input.nextLine();
 
-        //trim the name
+        //remove possible spaces on the end of the string
         name = name.trim();
         System.out.println("Please enter your name: " + name);
         System.out.println(" ");
 
+        //array that splits name by spaces
         String[] parts = name.split(" ");
 
+        //prints out different parts of the name depending if there are 2 or 3 parts of name var
         if (parts.length != 3){
             System.out.print("First Name: " + parts[0] + "\n" + "Middle Name: (none) \n" + "Last Name: " + parts[1] + "\n");
         } else {
             System.out.print("First Name: " + parts[0] + "\n" + "Middle Name: " + parts[1] + "\n" + "Last Name: " + parts[2] + "\n");
         }
-
-
-
-        //Parse the name display the individual pieces of the name.
-
 
     }
 }
